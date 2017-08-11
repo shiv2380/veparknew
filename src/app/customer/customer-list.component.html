@@ -1,0 +1,53 @@
+<!--<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+        <button id="btnGet" (click)='onButtonGetClick()' >Get All Customers</button>
+        <button id="btnClear" (click)='onButtonClearClick()'>Clear</button>
+        <ul id="customer" *ngFor='let customer of products'>
+            <li>{{customer.FirstName}} {{customer.LastName}} </li>
+        </ul>
+    </div>
+</div>-->
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+        <button id="btnGet" (click)='onButtonGetClick()'>Get All Customers</button>
+        <button id="btnClear" (click)='onButtonClearClick()'>Clear</button>
+        <a class="pull-right" (click)="onClick()"><strong>Log Off {{userName}}</strong></a>
+        <hr>
+
+        <div class="table-responsive">
+            <table id="customertable" class="table" *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td>{{product.FirstName}} {{product.LastName}}</td>
+                        <td>{{product.Type}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <modal #modal [keyboard]="false" [backdrop]="'static'">
+            <modal-header [show-close]="false">
+                <h4 class="modal-title">Session Expired</h4>
+            </modal-header>
+            <modal-body>
+                Please login again!
+            </modal-body>
+            <modal-footer>
+                <button type="button" class="btn btn-primary" (click)="close()">Ok</button>
+            </modal-footer>
+        </modal>
+    </div>
+</div>

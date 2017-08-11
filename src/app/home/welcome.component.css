@@ -1,0 +1,31 @@
+h1{
+     word-wrap: break-word;
+     -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+     -ms-hyphens: auto;
+     -o-hyphens: auto;
+     hyphens: auto;
+     color: darkorange;   
+            
+}
+
+.btn-round{
+border-radius: 17px;
+}
+
+hr{
+     clear: both;
+     visibility: hidden;
+}
+
+/* Flexbox Example 
+**************************************************************************/
+/*.flexbox { display: flex; }
+.flexbox .stretch { flex: 1; }
+.flexbox .normal { flex: 0; margin: 0 0 0 1rem; }
+.flexbox div input { padding: .5em 1em; width: 100%; }
+.flexbox div button { padding: .5em 1em; white-space: nowrap; }
+
+.flexbox div input#i1 { padding: .5em 1em; white-space: nowrap; }
+
+.flexbox div input#i2 { padding: .5em 1em; white-space: nowrap; }*/

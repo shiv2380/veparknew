@@ -1,0 +1,67 @@
+<!--<div class="default">
+  <section>
+      <app-header style="padding-top: 90px"></app-header>
+    <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
+    <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
+    <app-loading-indicator></app-loading-indicator>
+    <app-notification></app-notification>
+
+    <main class="body container">
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-checkout-footer *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-footer>
+    <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
+  </section>
+</div>-->
+
+
+
+<!--<div>
+    <nav class='navbar navbar-default'>
+        <div class='container'>
+            <div class="navbar-header">
+                <a class="navbar-brand" routerLink="/"><img style="max-width:100px; margin-top: -7px; max-height:40px" src="./app/assets/images/logo.png" alt="Angular Spree"></a>
+            </div>
+
+            <ul class='nav navbar-nav'>
+                <li><a routerLink="/welcome" routerLinkActive="active">Home</a></li>
+                <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+                <li><a routerLink="/customer" routerLinkActive="active">Customer</a></li>
+                <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+                <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class='container'>
+    <router-outlet></router-outlet>
+</div>-->
+
+
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="/"><img src="./app/assets/images/logo.png" alt="VePark">
+        </a>
+      </div>
+      <div id="navbar1" class="navbar-collapse collapse">        
+        <ul class='nav navbar-nav'>
+          <li><a routerLink="/welcome" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/products" routerLinkActive="active">Partner with us</a></li>
+          <li><a routerLink="/customer" routerLinkActive="active">Hourly & Daily</a></li>
+          <li><a>Monthly Subscription</a></li>
+          <li><a>Post your space</a></li>
+        </ul>
+        <app-profile-dropdown></app-profile-dropdown>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,3 +1,80 @@
-<h1>
-  {{title}}
-</h1>
+<!--<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" routerLink="/">          
+          <img src="./app/assets/images/logo.png" alt="VePark">
+        </a>
+      </div>
+      <div id="navbar1" class="navbar-collapse collapse">
+        <ul class='nav navbar-nav'>
+          <li><a routerLink="/welcome" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/products" routerLinkActive="active">Partner with us</a></li>
+          <li><a routerLink="/customer" routerLinkActive="active">Hourly & Daily</a></li>
+          <li><a>Monthly Subscription</a></li>
+          <li><a>Post your space</a></li>
+        </ul>
+
+        <app-profile-dropdown></app-profile-dropdown>
+
+      </div>
+
+    </div>
+
+  </nav>
+</div>-->
+
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+
+        <a class="navbar-brand" routerLink="/">
+          <img src="./src/app/assets/images/logo.png" alt="VePark">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class='nav navbar-nav'>
+          <!--<li><a routerLink="/welcome" routerLinkActive="active">Home</a></li>-->
+          <li><a routerLink="/products" routerLinkActive="active">Partner with us</a></li>
+          <li><a routerLink="/customer" routerLinkActive="active">Hourly & Daily</a></li>
+          <li><a>Monthly Subscription</a></li>
+          <li><a>Post your space</a></li>
+        </ul>
+
+        <app-profile-dropdown></app-profile-dropdown>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<hr>
+
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="(!router.url.includes(router.createUrlTree(['/login'])))" class='container'>
+  <app-footer *ngIf="(!router.url.includes(router.createUrlTree(['/register'])))"></app-footer>
+</div>
+
+
+
+
+
+<!--<div class='container'>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>-->
