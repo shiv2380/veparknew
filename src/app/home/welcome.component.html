@@ -12,7 +12,7 @@
             <form action="" class="form-inline">
                 <div class="form-group">                    
                     <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Searh by location e.g Jayanagar 4th Block, Bengaluru"
-                        [(ngModel)]="address" (setAddress)="getAddress($event)" googleplace>
+                        [(ngModel)]="address1" (setAddress)="getAddress($event)" googleplace>
                 </div>
                 <div class="form-group">
                     <label for="fromDate">From:</label>
@@ -46,6 +46,44 @@
         </div>
     </div>
 </section>
+
+<div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <input class="btn btn-default btn-block" type="button" value="Get current position" (click)="getCurrentPosition()">
+                
+                <div class="alert alert-warning alert-dismissible" role="alert" *ngIf="warning">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> {{ message }}
+                </div>
+
+                <!--these properties are required: center, zoom-->
+                <google-map [center]="center" [zoom]="zoom" [disableDefaultUI]="disableDefaultUI" [disableDoubleClickZoom]="disableDoubleClickZoom"
+                    [mapTypeId]="mapTypeId" [maxZoom]="maxZoom" [minZoom]="minZoom" [styles]="styles">
+                    <!--this property is required: position-->
+                    <google-map-marker [position]="position" [title]="title" [content]="content">
+                    </google-map-marker>
+                </google-map>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="control-label" for="input-search">Address</label>
+                    <div class="input-group">
+                        <input type="text" id="input-search" class="form-control" [(ngModel)]="address" (keyup.enter)="search(address)" placeholder="Address">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-fab btn-fab-mini" title="search" (click)="search(address)">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="btn btn-default btn-block" type="button" value="Get current position" (click)="getCurrentPosition()">
+            </div>
+        </div>
+    </div>
 
 <!-- Gallery -->
 <!--<div class="container">

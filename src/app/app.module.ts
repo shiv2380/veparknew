@@ -22,6 +22,13 @@ import {FooterComponent} from './layout/footer/footer.component';
 import {ProfileDropdownComponent} from './layout/header/profile-dropdown/profile-dropdown.component';
 import {GooglePlaceModule} from './directives/index';
 
+import { GoogleMapDirective } from '../app/directives/google-map.directive';
+import { GoogleMapMarkerDirective } from '../app/directives/google-map-marker.directive';
+
+import { MapsService } from '../app/services/maps.service';
+import { GeolocationService } from '../app/services/geolocation.service';
+import { GeocodingService } from '../app/services/geocoding.service';
+
 import { AlertModule } from 'ngx-bootstrap';
 
 let providers = {
@@ -48,11 +55,21 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [ BrowserModule, AlertModule.forRoot(), Angular2SocialLoginModule, HttpModule, FormsModule, Ng2Bs3ModalModule,
+  imports: [ BrowserModule, AlertModule.forRoot(), Angular2SocialLoginModule, 
+  HttpModule, FormsModule, Ng2Bs3ModalModule,
   GooglePlaceModule, RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent,
+
+  declarations: [ AppComponent, GoogleMapDirective,
+        GoogleMapMarkerDirective,
   ProductListComponent, ProductFilterPipe, StarComponent, ProductDetailComponent, WelcomeComponent, CustomerListComponent,
   RegisterComponent, LoginComponent, HeaderComponent, ProfileDropdownComponent, FooterComponent ],
+
+  providers: [
+        MapsService,
+        GeolocationService,
+        GeocodingService
+    ],
+
   bootstrap: [ AppComponent ]
 })
 export class AppModule { 
