@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     pageTitle: string = 'VePark';
     //islogin: boolean = true;
 
-constructor(private router: Router) {
+constructor(public router: Router) {
     
 }
 
