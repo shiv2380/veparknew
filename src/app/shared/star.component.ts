@@ -1,17 +1,17 @@
-import {Component, OnChanges, Input} from '@angular/core';
+// import {Component, OnChanges, Input} from '@angular/core';
 
-@Component({
-    selector: 'kdi-star',
-    templateUrl: 'star.component.html',
-    styleUrls: ['star.component.css']
-})
+// @Component({
+//     selector: 'kdi-star',
+//     templateUrl: 'star.component.html',
+//     styleUrls: ['star.component.css']
+// })
 
-export class StarComponent implements OnChanges {
-    @Input() rating: number;
-    startWidth: number;
+// export class StarComponent implements OnChanges {
+//     @Input() rating: number;
+//     startWidth: number;
 
-    ngOnChanges(): void {
-        this.startWidth = this.rating * 86 / 5;
-    }
+//     ngOnChanges(): void {
+//         this.startWidth = this.rating * 86 / 5;
+//     }
 
-}
+// }

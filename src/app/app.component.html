@@ -66,8 +66,12 @@
   <router-outlet></router-outlet>
 </div>
 
-<div *ngIf="(!router.url.includes(router.createUrlTree(['/login'])))" class='container'>
+<!--<div *ngIf="(!router.url.includes(router.createUrlTree(['/login'])))" class='container'>
   <app-footer *ngIf="(!router.url.includes(router.createUrlTree(['/register'])))"></app-footer>
+</div>-->
+
+<div class='container'>
+  <app-footer></app-footer>
 </div>
 
 

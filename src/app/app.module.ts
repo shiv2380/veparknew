@@ -11,7 +11,7 @@ import { AppComponent }  from './app.component';
 import { ProductListComponent }  from './products/product-list.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
-import { StarComponent } from './shared/star.component';
+// import { StarComponent } from './shared/star.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 
 import {CustomerListComponent} from './customer/customer-list.component';
@@ -61,7 +61,7 @@ const appRoutes: Routes = [
 
   declarations: [ AppComponent, GoogleMapDirective,
         GoogleMapMarkerDirective,
-  ProductListComponent, ProductFilterPipe, StarComponent, ProductDetailComponent, WelcomeComponent, CustomerListComponent,
+  ProductListComponent, ProductFilterPipe, ProductDetailComponent, WelcomeComponent, CustomerListComponent,
   RegisterComponent, LoginComponent, HeaderComponent, ProfileDropdownComponent, FooterComponent ],
 
   providers: [
